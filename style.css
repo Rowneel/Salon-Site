@@ -1,0 +1,674 @@
+:root {
+  --primary: #b17461;
+}
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+/* Custom Style Changes start here */
+
+/* Navbar */
+* {
+  text-decoration: none;
+}
+
+header {
+  background-color: #fff;
+  width: 100%;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand_logo {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #101010;
+  display: block;
+  margin: 0 auto;
+  padding: 1.25rem;
+  text-align: center;
+}
+
+header nav ul {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+header nav ul li {
+  list-style: none;
+  float: left;
+  padding: 0 16px;
+}
+
+header nav ul li a {
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: light;
+  color: #101010;
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 25px;
+  right: 2.75rem;
+  width: 40px;
+  font-size: 1.5rem;
+}
+
+.main-menu {
+  list-style-type: none;
+  position: absolute;
+  top: 60px;
+  width: 100%;
+  height: calc(60vh - 60px);
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  overflow: hidden; 
+  transform: translateX(-100%);
+  transition: 0.3s ease-out; 
+}
+.main-menu ul {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-menu li {
+  text-align: center;
+}
+
+.main-menu li a {
+  display: block;
+  padding: 1rem;
+  color: #111;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+header .main-menu.active {
+  transform: translateX(0);
+  transition: 0.3s ease-in; 
+}
+
+@media only screen and (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+  }
+  .brand_logo {
+    font-size: 4rem;
+    margin: 0;
+    padding: 0 5.75rem 0 6.25rem;
+    text-align: center;
+  }
+  header nav ul li a {
+    font-size: 1.5rem;
+    font-weight: light;
+    color: #101010;
+  }
+  .menu-toggle,
+  .main-menu {
+    display: none;
+  }
+}
+
+/* Main Section */
+
+.main_banner {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-image: url("./img/salon-shop.jpg");
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.main_banner h1 {
+  color: #fff;
+  font-weight: 900;
+  font-size: 2.5rem;
+  line-height: 3.75rem;
+  text-align: center;
+  text-shadow: 3px 3px #111;
+  width: 90%;
+}
+
+.main_banner h2 {
+  color: #fff;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 1px 1px #111;
+}
+
+.main_banner .banner_content {
+  backdrop-filter: blur(2px);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main_banner .banner_content .cta_btn {
+  position: relative;
+  color: #101010;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 40px;
+  background-color: #fff;
+  padding: 10px 50px;
+  display: inline-block;
+  box-shadow: 6px 6px 0px #111;
+  margin-top: 1.75rem;
+  transition: color 0.5s;
+  z-index: 1;
+}
+
+.main_banner .banner_content .cta_btn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+}
+.main_banner .banner_content .cta_btn:hover {
+  color: #fff;
+}
+.main_banner .banner_content .cta_btn:hover:before {
+  transform: scaleX(1);
+}
+
+@media only screen and (min-width: 768px) {
+  .main_banner h1 {
+    color: #fff;
+    font-weight: 800;
+    letter-spacing: .5rem;
+    font-size: 4rem;
+    line-height: 5rem;
+    width: 50%;
+  }
+  .main_banner h2 {
+    font-weight: 300;
+    font-size: 1.75rem;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 1px 1px #111;
+  }
+
+  
+}
+
+/* Separator */
+.separator {
+  margin: 5rem 2.5rem 0 2.5rem;
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 0;
+  text-align: center;
+  overflow: hidden;
+  display: block;
+}
+
+.separator_wrapper {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  top: 0;
+  padding: 0;
+  border: 0;
+  z-index: 2;
+  background-color: transparent;
+}
+
+.separator h3 {
+  font-weight: 200;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #624035;
+}
+
+.separator_line_before {
+  border-color: #111;
+  border-style: solid;
+  right: 100%;
+  content: "";
+  width: 1000px;
+  position: absolute;
+  bottom: 50%;
+  border-bottom-color: #2e2e2e;
+  border-bottom-width: 1px;
+  margin-bottom: -0.5px;
+  background-color: transparent;
+  padding: 0;
+  top: auto;
+}
+
+.separator_line_after {
+  border-color: #111;
+  border-style: solid;
+  left: 100%;
+  content: "";
+  width: 1000px;
+  position: absolute;
+  bottom: 50%;
+  border-bottom-color: #2e2e2e;
+  border-bottom-width: 1px;
+  margin-bottom: -0.5px;
+  background-color: transparent;
+  padding: 0;
+  top: auto;
+}
+
+.separator_content {
+  padding: 15px 40px;
+  display: inline-block;
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  background-color: var(--primary);
+  border: 1px solid #b2b2b2;
+  color: white;
+}
+
+/* Service Card */
+
+.main_links div {
+  display: block;
+  margin: 16px auto;
+  width: calc(100% - 50px);
+  text-align: center;
+  background-color: #fff;
+  margin-top: 2.5rem;
+}
+.main_links div img {
+  width: 300px;
+}
+.main_links div a {
+  color: #111;
+}
+
+.main_links div h3 {
+  font-size: 1.75rem;
+  font-weight: 900;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.25rem;
+}
+
+.main_links div h3 i {
+  font-size: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .main_links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    margin: 0 auto;
+    width: 80%;
+  }
+  
+  .main_links div {
+    text-align: center;
+  }
+
+  .main_links div h3 {
+    letter-spacing: normal;
+    font-size: 2rem;
+  }
+  
+  .main_links div img {
+    width: 100%;
+    max-width:100%;
+    height: calc(100% - 60px);
+    object-fit:cover;
+    margin-bottom: 10px;
+  }
+}
+
+/* Client Section */
+
+.image_container {
+  display: block;
+  margin: 50px auto;
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+
+.image_container img {
+  width: 300px;
+}
+
+.client_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  backdrop-filter: blur(3px);
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.client_content:hover {
+  opacity: 1;
+}
+
+.client_content h2 {
+  transform: translateY(20px);
+  transition: transform 0.5s ease;
+}
+
+.client_content:hover h2 {
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 768px) {
+  .client_transformation{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 100px; 
+    margin: 0 auto;
+    width: 60%;
+  }
+  .image_container img {
+    width: 100%;
+  }
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  background-color: var(--primary);
+}
+
+footer ul {
+  list-style: none;
+  text-align: center;
+  
+}
+
+footer ul li {
+  list-style: none;
+  color: white;
+  font-size: larger;
+  font-weight:lighter;
+  margin: 1.75rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+footer .social_contact {
+  font-size: 3rem;
+}
+
+.footer_menu{
+  flex: 1 1 100%;
+}
+.footer_contact{
+  flex:1 1 50%;
+}
+
+footer a {
+  color: white;
+}
+
+footer .footer_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+footer .brand_logo {
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+}
+
+footer .footer-end {
+  text-align: center;
+  width: 100%;
+  padding: 1rem;
+  background-color: #744b3f;
+  color: #fff;
+}
+
+@media only screen and (min-width: 768px) {
+  footer .footer-contact {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer_menu{
+    flex:1 1;
+  }
+  .footer_contact{
+    flex:1 1;
+  }
+
+  footer .footer_wrapper {
+    flex-wrap: nowrap;
+  }
+
+  footer .brand_logo {
+    font-size: 9rem;
+  }
+  footer ul li {
+    list-style: none;
+    color: white;
+    font-size: 2rem;
+    margin: 1.75rem 0;
+  }
+  footer .social_contact {
+    font-size: 4rem;
+  }
+}
